@@ -1,3 +1,6 @@
-// export your model definition here
+import { SchemaDefinition as def } from '@contember/schema-definition'
 
-export { } // you can delete this line once you export your first entity
+export class Article {
+  title = def.stringColumn()
+  content = def.stringColumn()
+}
