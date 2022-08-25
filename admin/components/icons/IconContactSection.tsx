@@ -18,4 +18,3 @@ export const IconContactSection = Component(
 	'IconContactSection'
 )
 
-asas
