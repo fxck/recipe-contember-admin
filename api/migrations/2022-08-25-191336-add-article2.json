@@ -1,0 +1,16 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createColumn",
+			"entityName": "Article",
+			"field": {
+				"name": "baz",
+				"columnName": "baz",
+				"columnType": "text",
+				"nullable": true,
+				"type": "String"
+			}
+		}
+	]
+}
