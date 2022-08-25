@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Block, BlockRepeater, Box, Component, HasOne, ImageFileRepeater, ImageUploadField, Repeater, RichTextField, TextField } from '@contember/admin'
+import { Block, BlockRepeater, Box, Component, HasOne, ImageFileRepeater, Repeater, RichTextField, TextField } from '@contember/admin'
 import { Button } from './Button'
 import { ContentField } from './ContentField'
 import { IconContactSection } from './icons/IconContactSection'
