@@ -1,0 +1,7 @@
+admin:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - yarn
+      - yarn build
+    deploy: [ ./admin/dist/~/ ]
