@@ -4,6 +4,5 @@ import { Image } from './Image'
 export class Article {
   title = def.stringColumn()
   content = def.stringColumn()
-  baz = def.stringColumn()
-  files = def.manyHasOne(Image).setNullOnDelete()
+  image = def.oneHasOne(Image).setNullOnDelete()
 }

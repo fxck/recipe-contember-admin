@@ -1,0 +1,29 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "removeField",
+			"entityName": "Article",
+			"fieldName": "baz"
+		},
+		{
+			"modification": "removeField",
+			"entityName": "Article",
+			"fieldName": "files"
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Article",
+			"owningSide": {
+				"type": "OneHasOne",
+				"name": "image",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "image_id",
+					"onDelete": "set null"
+				},
+				"nullable": true
+			}
+		}
+	]
+}

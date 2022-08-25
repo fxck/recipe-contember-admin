@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { CreatePage, RichTextField, TextField, AnyFileRepeater } from '@contember/admin'
+import { CreatePage, RichTextField, TextField, ImageUploadField } from '@contember/admin'
 
 export default () => (
   <CreatePage
@@ -9,6 +9,6 @@ export default () => (
   >
     <TextField field="title" label="Title" />
     <RichTextField field="content" label="Content" />
-    <AnyFileRepeater field="files" label="Any upload" urlField="file.url" orderBy="order" />
+    <ImageUploadField urlField="image.url" label="Image upload" />
   </CreatePage>
 )
