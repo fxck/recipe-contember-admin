@@ -1,7 +1,10 @@
 admin:
   build:
     base: [ nodejs@16 ]
+    prepare:
+      - npm i -g @contember/cli@1.1.2
     build:
-      - yarn
-      - yarn build
+      - npm i
+      - npm run build-admin
+      - contember migrations:execute $CONTEMBER_PROJECT_NAME --yes
     deploy: [ ./admin/dist/~/ ]
