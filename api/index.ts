@@ -1,4 +1,14 @@
-import { createSchema } from '@contember/schema-definition'
-import * as model from './model'
+import { InputValidation, SchemaDefinition } from '@contember/schema-definition'
+import { Schema } from '@contember/schema'
+import * as modelDefinition from './model'
+import aclFactory from './acl'
 
-export default createSchema(model)
+const model = SchemaDefinition.createModel(modelDefinition)
+
+const schema: Schema = {
+	model: model,
+	acl: aclFactory(model),
+	validation: InputValidation.parseDefinition(modelDefinition),
+}
+
+export default schema

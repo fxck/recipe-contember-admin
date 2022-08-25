@@ -1,10 +1,13 @@
 import * as React from 'react'
-import { EditPage, RichTextField, TextField, ImageUploadField } from '@contember/admin'
+import { EditPage } from '@contember/admin'
+import { ArticleForm, ArticleSideForm } from '../forms/articleForms'
+import locale from '../locales'
 
 export default () => (
-    <EditPage entity="Article(id = $id)" rendererProps={{ title: 'Edit Article' }}>
-        <TextField field="title" label="Title" />
-        <RichTextField field="content" label="Content" />
-        <ImageUploadField urlField="image.url" label="Image upload" />
-    </EditPage>
+	<EditPage
+		entity="Article(id=$id)"
+		rendererProps={{ title: locale['Edit article'], side: <ArticleSideForm /> }}
+	>
+		<ArticleForm />
+	</EditPage>
 )

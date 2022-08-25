@@ -1,12 +1,23 @@
 import * as React from 'react'
 import { ReactNode } from 'react'
-import { Layout as ContemberLayout } from '@contember/admin'
+import { DimensionsSwitcher, Layout as ContemberLayout } from '@contember/admin'
 import { Navigation } from './Navigation'
 
 export const Layout = (props: { children?: ReactNode }) => (
 	<ContemberLayout
-		sidebarHeader="contember-admin-final"
+		sidebarHeader="Contember"
 		navigation={<Navigation />}
-		children={props.children}
-	/>
+		switchers={
+			<DimensionsSwitcher
+				optionEntities="Locale"
+				orderBy="code asc"
+				dimension="locale"
+				labelField="code"
+				slugField="code"
+				maxItems={2}
+			/>
+		}
+	>
+		{props.children}
+	</ContemberLayout >
 )
